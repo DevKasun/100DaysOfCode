@@ -1,11 +1,11 @@
 import React from 'react';
 import classes from './Modal.module.css';
 
-const Modal = React.forwardRef((props, ref) => {
+const Modal = (props) => {
     return (
         <>
             {props.modalIsActive && (
-                <div className={classes['modal-backdrop']} ref={ref}>
+                <div className={classes['modal-backdrop']}>
                     <div className={classes['modal-container']}>
                         <div className={classes['modal-close']}>
                             <span onClick={props.closeModalHandler}>❌</span>
@@ -22,6 +22,6 @@ const Modal = React.forwardRef((props, ref) => {
             )}
         </>
     );
-});
+};
 
 export default Modal;

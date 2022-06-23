@@ -1,15 +1,15 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Kite+One&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Kite One', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
 }
 
 ul {
@@ -18,13 +18,30 @@ ul {
 }
 
 ul li {
-  margin-bottom: .8em;
+  margin-bottom: 1em;
 }
 
 ul li p {
   margin: 0;
+  font-size: 24px;
 }
 
 ul li span {
   font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding-bottom: 1em;
+}
+
+.hooks {
+  font-size: 2rem;
+  background: rgb(20, 20, 50);
+  padding: 0.4em 1em;
+  margin: 1em 0;
 }

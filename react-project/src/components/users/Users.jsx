@@ -1,17 +1,14 @@
-const Users = props => {
-
+const Users = (props) => {
     const usersList = props.userData.map((user) => {
         return (
-            <li>
+            <li key={user.id}>
                 <p>{user.name}</p>
                 <span>{user.job}</span>
             </li>
         );
     });
 
-    return (
-        <ul>{usersList}</ul>
-    )
-}
+    return <ul>{usersList}</ul>;
+};
 
 export default Users;

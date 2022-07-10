@@ -1,0 +1,18 @@
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2em;
+    width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    .grid-layout {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    .grid-layout {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import ReactDOM from 'react-dom';
-import Modal from '../../modal/Modal';
+import Modal from './modal/Modal';
 
 const ReactPortal = () => {
 	const [modalIsActive, setModalIsActive] = useState(false);
@@ -13,9 +13,13 @@ const ReactPortal = () => {
 	}
 
 	return (
-		<>
-			<h3 className='hooks'>React Portal</h3>
-			<button type='button' onClick={openModalHandler}>
+		<section>
+			<h1 className='title'>React Hooks</h1>
+			<button
+				type='button'
+				onClick={openModalHandler}
+				style={{ marginTop: '1em' }}
+			>
 				Open modal
 			</button>
 			{ReactDOM.createPortal(
@@ -25,7 +29,7 @@ const ReactPortal = () => {
 				/>,
 				document.getElementById('portal')
 			)}
-		</>
+		</section>
 	);
 };
 

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ReactDOM from 'react-dom';
+import Button from '../../Button/Button';
 import Modal from './modal/Modal';
 
 const ReactPortal = () => {
@@ -15,13 +16,9 @@ const ReactPortal = () => {
 	return (
 		<section>
 			<h1 className='title'>React Hooks</h1>
-			<button
-				type='button'
-				onClick={openModalHandler}
-				style={{ marginTop: '1em' }}
-			>
+			<Button onClick={openModalHandler} className='mt-4'>
 				Open modal
-			</button>
+			</Button>
 			{ReactDOM.createPortal(
 				<Modal
 					modalIsActive={modalIsActive}

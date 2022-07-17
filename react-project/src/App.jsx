@@ -1,39 +1,28 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import './App.css';
-import Grid from './components/Layout/Grid/Grid';
-import ReactPortal from './components/Lessons/ReactPortal/ReactPortal';
-import UseState from './components/Lessons/UseState/UseState';
-import UseEffect from './components/Lessons/UseEffect/UseEffect';
-import UseRef from './components/Lessons/UseRef/UseRef';
-import UseLayoutEffect from './components/Lessons/UseLayoutEffect/UseLayoutEffect';
-import UseMemo from './components/Lessons/UseMemo/UseMemo';
+import NavBar from './components/Layout/NavBar/NavBar';
+import AboutPage from './pages/AboutPage';
+import HomePage from './pages/HomePage';
+import LessonsPage from './pages/LessonsPage';
 
 function App() {
 	return (
 		<div className='App'>
-			<header className='App-header'>
-				<img src={logo} className='App-logo' alt='logo' />
-				<Grid>
-					<div>
-						<ReactPortal />
-					</div>
-					<div>
-						<UseState />
-					</div>
-					<div>
-						<UseEffect />
-					</div>
-					<div>
-						<UseLayoutEffect />
-					</div>
-					<div>
-						<UseRef />
-					</div>
-					<div>
-						<UseMemo />
-					</div>
-				</Grid>
-			</header>
+			<Router>
+				<NavBar />
+				<main>
+					<Routes>
+						<Route path='/' element={<HomePage />} />
+					</Routes>
+					<Routes>
+						<Route path='/lessons' element={<LessonsPage />} />
+					</Routes>
+					<Routes>
+						<Route path='/about' element={<AboutPage />} />
+					</Routes>
+				</main>
+			</Router>
 		</div>
 	);
 }

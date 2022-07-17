@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Users from '../../users/Users';
+import Users from './users/Users';
 
 const UseState = () => {
 	const [userData, setUserData] = useState([

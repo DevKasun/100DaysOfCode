@@ -1,10 +1,12 @@
 import React from 'react';
+import PageContentWrapper from '../components/Layout/PageContentWrapper/PageContentWrapper';
 
 const AboutPage = () => {
 	return (
-		<div className='about-page'>
-			<h1 className='title'>About</h1>
-		</div>
+		<PageContentWrapper
+			className='about-page'
+			title='About'
+		></PageContentWrapper>
 	);
 };
 

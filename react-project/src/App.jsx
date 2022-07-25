@@ -2,24 +2,24 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './App.css';
 import NavBar from './components/Layout/NavBar/NavBar';
-import AboutPage from './pages/AboutPage';
+import FormsPage from './pages/FormsPage';
 import HomePage from './pages/HomePage';
-import LessonsPage from './pages/LessonsPage';
+import StylingPage from './pages/StylingPage';
 
 function App() {
 	return (
 		<div className='App'>
 			<Router>
 				<NavBar />
-				<main>
+				<main className='container relative h-full z-5  mx-auto px-4 py-8'>
 					<Routes>
 						<Route path='/' element={<HomePage />} />
 					</Routes>
 					<Routes>
-						<Route path='/lessons' element={<LessonsPage />} />
+						<Route path='/styling' element={<StylingPage />} />
 					</Routes>
 					<Routes>
-						<Route path='/about' element={<AboutPage />} />
+						<Route path='/forms' element={<FormsPage />} />
 					</Routes>
 				</main>
 			</Router>

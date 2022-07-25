@@ -13,6 +13,7 @@ const UseRef = () => {
 			<h3 className='hooks'>useRef</h3>
 			<input
 				type='text'
+				className='useref-input'
 				ref={inputRef}
 				onChange={handleUseRefValue}
 				placeholder='type something'

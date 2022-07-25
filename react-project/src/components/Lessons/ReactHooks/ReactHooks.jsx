@@ -10,7 +10,7 @@ import UseMemo from './UseMemo/UseMemo';
 const ReactHooks = () => {
 	return (
 		<section>
-			<h1 className='title'>React Hooks</h1>
+			<h1 className='text-4xl pt-4 pb-0'>React Hooks</h1>
 			<Grid>
 				<div>
 					<UseState />

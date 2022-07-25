@@ -20,7 +20,7 @@ const NavBar = () => {
 							<NavLink to='/styling'>Styled Components</NavLink>
 						</li>
 						<li className='margin-0 text-xl text-slate-50 hover:text-slate-50'>
-							<NavLink to='/about'>About</NavLink>
+							<NavLink to='/forms'>Forms</NavLink>
 						</li>
 					</ul>
 				</nav>

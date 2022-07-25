@@ -1,12 +1,12 @@
 import React from 'react';
+import PageContentWrapper from '../components/Layout/PageContentWrapper/PageContentWrapper';
 import TailwindStyle from '../components/Lessons/TailwindStyling/TailwindStyle';
 
 const LessonsPage = () => {
 	return (
-		<div className='lessons-page'>
-			<h1 className='title'>Styling</h1>
+		<PageContentWrapper className='styling-page' title='Styling'>
 			<TailwindStyle />
-		</div>
+		</PageContentWrapper>
 	);
 };
 

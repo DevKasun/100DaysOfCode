@@ -1,11 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './App.css';
-import Button from './components/Button/Button';
 import NavBar from './components/Layout/NavBar/NavBar';
-import AboutPage from './pages/AboutPage';
+import FormsPage from './pages/FormsPage';
 import HomePage from './pages/HomePage';
-import StylingPage from './pages/Styling';
+import StylingPage from './pages/StylingPage';
 
 function App() {
 	return (
@@ -20,7 +19,7 @@ function App() {
 						<Route path='/styling' element={<StylingPage />} />
 					</Routes>
 					<Routes>
-						<Route path='/about' element={<AboutPage />} />
+						<Route path='/forms' element={<FormsPage />} />
 					</Routes>
 				</main>
 			</Router>

@@ -15,9 +15,9 @@ const ReactPortal = () => {
 
 	return (
 		<section>
-			<h1 className='title'>React Hooks</h1>
+			<h1 className='text-4xl'>React Portal</h1>
 			<Button onClick={openModalHandler} className='mt-4'>
-				Open modal
+				Open modal (portal example)
 			</Button>
 			{ReactDOM.createPortal(
 				<Modal

@@ -1,7 +1,6 @@
 import React from 'react';
 
 const TodoList = ({ todos }) => {
-	console.log(todos);
 
 	return (
 		<div className='todo-list pt-8 pl-2 pr-2'>

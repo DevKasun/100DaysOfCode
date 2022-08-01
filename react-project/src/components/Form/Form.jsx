@@ -8,6 +8,7 @@ const Form = (props) => {
 			<form
 				action={props.action}
 				methods={props.method}
+				onSubmit={props.onSubmit}
 				className='text-left w-full max-w-lg p-8 bg-slate-50 shadow-lg rounded-xl overflow-hidden'
 			>
 				<h3 className='text-xl'>{props.title}</h3>

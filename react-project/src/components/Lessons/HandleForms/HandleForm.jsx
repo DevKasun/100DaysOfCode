@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import Grid from '../../Layout/Grid/Grid';
 import TodoApp from './ToDoApp/TodoForm';
 
 const HandleForm = () => {
 	return (
-		<Grid>
+		<div className='grid grid-cols-3 gap-4'>
 			<div className='todo-app'>
 				<TodoApp />
 			</div>
-		</Grid>
+		</div>
 	);
 };
 

@@ -6,33 +6,16 @@ import Form from '../../../Form/Form';
 import Input from '../../../Input/Input';
 import TodoList from './TodoList';
 
-const LOCAL_STORAGE_KEY = 'todoApp.todos';
-
 const TodoForm = () => {
 	const [newTodo, setNewTodo] = useState('');
-	const [todos, setTodos] = useState([
-		{
-			id: uuidv4(),
-			title: 'Read the book',
-			complete: false,
-		},
-		{
-			id: uuidv4(),
-			title: 'UI/UX for the website',
-			complete: true,
-		},
-	]);
+	const [todos, setTodos] = useState([]);
 	const [errorEnable, isErrorEnable] = useState(false);
 
 	useEffect(() => {
-		const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+		const storedTodos = JSON.parse(localStorage.getItem('todos'));
 		console.log(storedTodos);
 		if (storedTodos) setTodos(storedTodos);
 	}, []);
-
-	useEffect(() => {
-		localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
-	}, [todos]);
 
 	const handleOnChange = (event) => {
 		const inputVal = event.target.value;
@@ -56,6 +39,7 @@ const TodoForm = () => {
 			];
 			setTodos([...todos, ...item]);
 			setNewTodo('');
+			localStorage.setItem('todos', JSON.stringify([...todos, ...item]));
 		}
 	};
 
@@ -66,6 +50,7 @@ const TodoForm = () => {
 		});
 		foundItem.complete = !foundItem.complete;
 		setTodos(newTodoList);
+		localStorage.setItem('todos', JSON.stringify(newTodoList));
 	};
 
 	const deleteTodo = (id) => {
@@ -74,6 +59,7 @@ const TodoForm = () => {
 			return item.id != id;
 		});
 		setTodos(filteredTodos);
+		localStorage.setItem('todos', JSON.stringify(filteredTodos));
 	};
 
 	return (

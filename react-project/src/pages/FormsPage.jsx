@@ -4,7 +4,7 @@ import HandleForm from '../components/Lessons/HandleForms/HandleForm';
 
 const FormsPage = () => {
 	return (
-		<PageContentWrapper className='forms-page' title='Handle Forms'>
+		<PageContentWrapper className='forms-page w-full' title='Handle Forms'>
 			<HandleForm />
 		</PageContentWrapper>
 	);

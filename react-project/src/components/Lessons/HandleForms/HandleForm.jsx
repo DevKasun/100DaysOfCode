@@ -2,6 +2,7 @@ import React from 'react';
 
 import TodoApp from './ToDoApp/TodoForm';
 import YupFormValidation from './FormValidationWithYup/YupFormValidation';
+import BasicFormik from './FormikForm/BasicFormik';
 
 const HandleForm = () => {
 	return (
@@ -11,6 +12,9 @@ const HandleForm = () => {
 			</div>
 			<div className='yup-form'>
 				<YupFormValidation />
+			</div>
+			<div className='formik-form-basic'>
+				<BasicFormik />
 			</div>
 		</div>
 	);

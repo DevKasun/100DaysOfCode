@@ -3,7 +3,7 @@ import React from 'react';
 const Form = (props) => {
 	return (
 		<div
-			className={`flex items-center justify-center form-wrapper my-12 py-12 bg-green-300 rounded-lg ${props.className}`}
+			className={`flex items-center justify-center form-wrapper py-12 bg-green-300 rounded-lg ${props.className}`}
 		>
 			<form
 				action={props.action}

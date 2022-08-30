@@ -36,8 +36,8 @@ const BasicFormik = () => {
 			.required('Email is a required field'),
 		password: yup
 			.string()
-			.min(4, 'Too Short!')
-			.max(10, 'Too Long!')
+			.min(4, 'Too Short')
+			.max(10, 'Too Long')
 			.required('Please enter your password'),
 	});
 

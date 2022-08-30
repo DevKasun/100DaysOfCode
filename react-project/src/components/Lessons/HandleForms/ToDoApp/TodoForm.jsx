@@ -13,7 +13,6 @@ const TodoForm = () => {
 
 	useEffect(() => {
 		const storedTodos = JSON.parse(localStorage.getItem('todos'));
-		console.log(storedTodos);
 		if (storedTodos) setTodos(storedTodos);
 	}, []);
 

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import Button from '../../../Button/Button';
 import Form from '../../../Form/Form';
 import Input from '../../../Input/Input';
@@ -7,8 +7,6 @@ import { userSchema } from './../../../../validation/UserRegistration';
 
 const UserRegistration = () => {
 	const [isUserRegistered, setUserRegistered] = useState(false);
-
-	const formRef = useRef();
 
 	const createUser = async (event) => {
 		event.preventDefault();
@@ -37,7 +35,6 @@ const UserRegistration = () => {
 				onSubmit={createUser}
 				className='bg-slate-50'
 				title='YUP validation'
-				ref={formRef}
 			>
 				<div className='pb-4'>
 					<Input type='text' placeholder='Name' />

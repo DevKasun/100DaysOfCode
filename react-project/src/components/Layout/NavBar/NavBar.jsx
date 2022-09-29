@@ -22,6 +22,9 @@ const NavBar = () => {
 						<li className='margin-0 text-xl text-slate-50 hover:text-slate-50'>
 							<NavLink to='/forms'>Forms</NavLink>
 						</li>
+						<li className='margin-0 text-xl text-slate-50 hover:text-slate-50'>
+							<NavLink to='/apicalls'>API calls</NavLink>
+						</li>
 					</ul>
 				</nav>
 			</header>
